@@ -18,6 +18,9 @@ public class CreateInvoiceCommandHandler : IRequestHandler<CreateInvoiceCommand,
 
     public async Task<Result<InvoiceDto>> Handle(CreateInvoiceCommand request, CancellationToken cancellationToken)
     {
+        if(request.AuthenticatedCompanyId == request.Invoice.CounterPartyCompanyId)
+            return Result<InvoiceDto>.Failure("Cannot send invoice to the same company");
+
         var existingInvoice = await _context.Invoices
             .Where(i => i.InvoiceId == request.Invoice.InvoiceId && i.CompanyId == request.AuthenticatedCompanyId)
             .FirstOrDefaultAsync(cancellationToken);

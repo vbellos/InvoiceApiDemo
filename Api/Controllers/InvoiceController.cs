@@ -42,7 +42,7 @@ public class InvoiceController : ControllerBase
     ///     "vatAmount": 20.0,
     ///     "totalAmount": 120.0,
     ///     "description": "Invoice for services rendered.",
-    ///     "counterPartyCompanyId": "softone"
+    ///     "counterPartyCompanyId": "edrink"
     ///     }`
     /// </remarks>
     [HttpPost]
