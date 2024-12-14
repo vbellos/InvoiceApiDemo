@@ -1,4 +1,5 @@
 # Invoicing API
+Minimal .NET API implementation using the CQRS Pattern with MediatR. The project employs Entity Framework Core with SQLite for data persistence.
 
 This API provides endpoints to manage companies, users, and invoices. It supports creating invoices and retrieving sent/received invoices with simple token-based authentication.
 
@@ -28,12 +29,18 @@ This API provides endpoints to manage companies, users, and invoices. It support
     ```
    Swagger UI will be available at: [http://localhost:5000/swagger/index.html](http://localhost:5000/swagger/index.html)
 
-2. **Run with Docker**:
+2. **Build and run with Docker**:
     ```
     cd Docker
     .\docker-compose-debug.cmd
     ```
-    After containers start, the API will be available at [http://localhost:8000/swagger/index.html](http://localhost:8000/swagger/index.html)
+    After container starts, the API will be available at [http://localhost:8000/swagger/index.html](http://localhost:8000/swagger/index.html)
+
+3. **Run prebuilt image with Docker**:
+    ```
+    docker run -d -p 9000:80 -e ASPNETCORE_ENVIRONMENT=Development -e ASPNETCORE_URLS=http://+:80 --name invoice-api ghcr.io/vbellos/invoice-api:latest
+    ```
+    After container starts, the API will be available at [http://localhost:9000/swagger/index.html](http://localhost:8000/swagger/index.html)
 
 ### Authentication
 
