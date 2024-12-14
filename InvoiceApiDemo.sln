@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "Api\Api.csproj", "{40C5C85D-C848-4E1B-8901-DD309628CBDC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{92E2CEAE-D32D-4C06-AE2F-3836DDA0CC59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{96DD3BF2-29CB-4FAB-AD3F-2FE71372EAE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{893B45B6-2BAD-44E4-AA6D-27732BC42655}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{2DC7095D-374F-4872-A77A-CDA6198561A6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docker", "Docker", "{048FFBDB-360E-4B7A-A8E7-F2A938440BBC}"
+	ProjectSection(SolutionItems) = preProject
+		Docker\docker-compose-debug.cmd = Docker\docker-compose-debug.cmd
+		Docker\docker-compose.yml = Docker\docker-compose.yml
+		Docker\Dockerfile = Docker\Dockerfile
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{40C5C85D-C848-4E1B-8901-DD309628CBDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40C5C85D-C848-4E1B-8901-DD309628CBDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40C5C85D-C848-4E1B-8901-DD309628CBDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40C5C85D-C848-4E1B-8901-DD309628CBDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92E2CEAE-D32D-4C06-AE2F-3836DDA0CC59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92E2CEAE-D32D-4C06-AE2F-3836DDA0CC59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92E2CEAE-D32D-4C06-AE2F-3836DDA0CC59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92E2CEAE-D32D-4C06-AE2F-3836DDA0CC59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96DD3BF2-29CB-4FAB-AD3F-2FE71372EAE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96DD3BF2-29CB-4FAB-AD3F-2FE71372EAE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96DD3BF2-29CB-4FAB-AD3F-2FE71372EAE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96DD3BF2-29CB-4FAB-AD3F-2FE71372EAE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{893B45B6-2BAD-44E4-AA6D-27732BC42655}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{893B45B6-2BAD-44E4-AA6D-27732BC42655}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{893B45B6-2BAD-44E4-AA6D-27732BC42655}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{893B45B6-2BAD-44E4-AA6D-27732BC42655}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DC7095D-374F-4872-A77A-CDA6198561A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DC7095D-374F-4872-A77A-CDA6198561A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DC7095D-374F-4872-A77A-CDA6198561A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DC7095D-374F-4872-A77A-CDA6198561A6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

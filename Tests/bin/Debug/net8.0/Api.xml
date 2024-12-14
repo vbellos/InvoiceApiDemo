@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Api</name>
+    </assembly>
+    <members>
+        <member name="T:Api.Controllers.InvoiceController">
+            <summary>
+                API for managing invoices.
+            </summary>
+        </member>
+        <member name="M:Api.Controllers.InvoiceController.CreateInvoice(Common.DTOs.CreateInvoiceDto)">
+            <summary>
+                Creates a new invoice.
+            </summary>
+            <param name="dto">Details of the invoice to create.</param>
+            <returns>The created invoice with its ID.</returns>
+            <remarks>
+                Authorization token is required in the request header.
+            
+                Example: `Authorization: token_softone`
+            
+                Sample JSON payload:
+            
+                `{
+                "invoiceId": "INV001",
+                "dateIssued": "2024-01-01T00:00:00Z",
+                "netAmount": 100.0,
+                "vatAmount": 20.0,
+                "totalAmount": 120.0,
+                "description": "Invoice for services rendered.",
+                "counterPartyCompanyId": "softone"
+                }`
+            </remarks>
+        </member>
+        <member name="M:Api.Controllers.InvoiceController.GetSentInvoices(System.String,System.Nullable{System.DateTime},System.String)">
+            <summary>
+                Retrieves invoices sent by the authenticated company.
+            </summary>
+            <param name="counter_party_company">Filter by counter-party company ID.</param>
+            <param name="date_issued">Filter by the date the invoice was issued.</param>
+            <param name="invoice_id">Filter by the invoice ID.</param>
+            <returns>A list of sent invoices.</returns>
+            <remarks>
+                Authorization token is required in the request header.
+            
+                Example: `Authorization: token_softone`
+            
+                Filters can be applied using query parameters:
+            
+                - `counter_party_company` (optional): ID of the counter-party company.
+            
+                - `date_issued` (optional): Date when the invoice was issued.
+            
+                - `invoice_id` (optional): ID of the specific invoice.
+            </remarks>
+        </member>
+        <member name="M:Api.Controllers.InvoiceController.GetReceivedInvoices(System.String,System.Nullable{System.DateTime},System.String)">
+            <summary>
+                Retrieves invoices received by the authenticated company.
+            </summary>
+            <param name="counter_party_company">Filter by sender company ID.</param>
+            <param name="date_issued">Filter by the date the invoice was issued.</param>
+            <param name="invoice_id">Filter by the invoice ID.</param>
+            <returns>A list of received invoices.</returns>
+            <remarks>
+                Authorization token is required in the request header.
+            
+                Example: `Authorization: token_edrink`
+            
+                Filters can be applied using query parameters:
+            
+                - `counter_party_company` (optional): ID of the sender company.
+            
+                - `date_issued` (optional): Date when the invoice was issued.
+            
+                - `invoice_id` (optional): ID of the specific invoice.
+            </remarks>
+        </member>
+    </members>
+</doc>
